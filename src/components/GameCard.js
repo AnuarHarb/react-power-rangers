@@ -12,10 +12,11 @@ const GameCardStyles = styled.article`
   font-size: 25px;
 `;
 
-const GameCard = () => {
+const GameCard = ({arma, clickHandler}) => {
+
   return (
-    <GameCardStyles>
-      tarjeta de juego
+    <GameCardStyles onClick={()=>{clickHandler(arma)}}>
+      {arma}
     </GameCardStyles>
   )
 }
